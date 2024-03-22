@@ -1,0 +1,117 @@
+(base) ➜  ec2-creation git:(main) ✗ terraform destroy
+aws_instance.myec2: Refreshing state... [id=i-05b116c2541eb6738]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.myec2 will be destroyed
+  - resource "aws_instance" "myec2" {
+      - ami                                  = "ami-0c101f26f147fa7fd" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:767397728097:instance/i-05b116c2541eb6738" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - cpu_core_count                       = 1 -> null
+      - cpu_threads_per_core                 = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - id                                   = "i-05b116c2541eb6738" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "t2.micro" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-075eb7c72e9e18068" -> null
+      - private_dns                          = "ip-172-31-30-126.ec2.internal" -> null
+      - private_ip                           = "172.31.30.126" -> null
+      - public_dns                           = "ec2-54-210-18-99.compute-1.amazonaws.com" -> null
+      - public_ip                            = "54.210.18.99" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [
+          - "default",
+        ] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-016a48f5e149c449d" -> null
+      - tags                                 = {
+          - "Name" = "myec2"
+        } -> null
+      - tags_all                             = {
+          - "Name" = "myec2"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data_replace_on_change          = false -> null
+      - vpc_security_group_ids               = [
+          - "sg-0583876897fa4759c",
+        ] -> null
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count       = 1 -> null
+          - threads_per_core = 1 -> null
+        }
+
+      - credit_specification {
+          - cpu_credits = "standard" -> null
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = false -> null
+          - iops                  = 3000 -> null
+          - tags                  = {} -> null
+          - tags_all              = {} -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-088afe27c4383084d" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 1 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.myec2: Destroying... [id=i-05b116c2541eb6738]
+aws_instance.myec2: Still destroying... [id=i-05b116c2541eb6738, 10s elapsed]
+aws_instance.myec2: Still destroying... [id=i-05b116c2541eb6738, 20s elapsed]
+aws_instance.myec2: Still destroying... [id=i-05b116c2541eb6738, 30s elapsed]
+aws_instance.myec2: Still destroying... [id=i-05b116c2541eb6738, 40s elapsed]
+aws_instance.myec2: Destruction complete after 43s
+
+Destroy complete! Resources: 1 destroyed.
